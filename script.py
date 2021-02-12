@@ -27,14 +27,4 @@ print("Image Saved....")
 print("Image Size Convertion...")
 
 original_path = str(os.getcwd())
-path = original_path + "\image.jpg"
-
-os.chdir(original_path + "\waifu2x")
-
-command = f'python waifu2x.py --method noise_scale --noise_level 3 --input "{path}" --arch VGG7'
-os.system(command)
-
-
-
-
-
+path = original_path + "/image.jpg"
