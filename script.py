@@ -28,3 +28,11 @@ print("Image Size Convertion...")
 
 original_path = str(os.getcwd())
 path = original_path + "/image.jpg"
+
+os.chdir('../')
+print(str(os.getcwd()))
+os.chdir('waifu2x-chainer')
+
+
+command = f'python waifu2x.py -m noise_scale -n 3 -i "{path}" --arch VGG7 --gpu 0'
+os.system(command)
