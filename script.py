@@ -2,7 +2,7 @@ import requests, json, os, sys
 import urllib.request
 from bs4 import BeautifulSoup
 
-image = "https://www.shutterstock.com/fr/image-photo/masked-journalists-filming-interviews-during-coronavirus-1743723599"
+image = str(input("image url: "))
 print("Request to Tomato.to...")
 req = requests.get('https://tomato.to/toma.php?url=' + image)
 data_json = json.loads(req.text)["data"]
